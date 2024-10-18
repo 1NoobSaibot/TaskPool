@@ -10,7 +10,7 @@
 	}
 
 
-	internal class TaskPool : ITaskPool
+	public class TaskPool : ITaskPool
 	{
 		private readonly object _lock = new();
 		private readonly List<TaskHolder> _tasks = new();
