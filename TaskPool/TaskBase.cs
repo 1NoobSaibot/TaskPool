@@ -25,6 +25,11 @@ namespace TaskPool
 
 		protected void SetException(Exception exception)
 		{
+			if (this.Exception is not null)
+			{
+				return;
+			}
+
 			Exception = exception;
 			FirePropertyChanged(nameof(Exception));
 			FirePropertyChanged(nameof(ErrorMessage));
