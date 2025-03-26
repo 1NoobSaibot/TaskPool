@@ -13,7 +13,7 @@
 	public class TaskPool : ITaskPool
 	{
 		private readonly Lock _lock = new();
-		private readonly List<TaskHolder> _tasks = new();
+		private readonly List<TaskHolder> _tasks = [];
 		private int _taskPointer = 0;
 		private readonly Task[] _workers;
 		public bool IsRunning { get; private set; } = true;
