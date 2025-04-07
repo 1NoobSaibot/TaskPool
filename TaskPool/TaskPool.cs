@@ -25,7 +25,7 @@
 			int numberOfProcesses = Math.Max(1, numberOfCores - 1);
 			_workers = new Task[numberOfProcesses];
 
-			for (int i = 0; i < numberOfProcesses; i++)
+			foreach (int i in numberOfProcesses)
 			{
 				_workers[i] = Task.Run(RunWorker);
 			}
